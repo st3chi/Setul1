@@ -416,16 +416,15 @@ namespace Setul_1
             Console.WriteLine("Ghiceste numarul cuprins intre 1-1024");
             Random n = new Random();
             int random = n.Next(1, 1024);
-            int nr = 0;
+            int nr = int.Parse(Console.ReadLine());
             Console.WriteLine($"Introduceti un numar: ");
             while (nr != random)
             { 
-                nr = int.Parse(Console.ReadLine());
                 if (nr < random)
                     Console.WriteLine("Numarul este prea mic, introduceti alt numar: ");
                 else 
-                    if (nr > random)
                     Console.WriteLine("Numarul este prea mare, introduceti alt numar: ");
+                                nr = int.Parse(Console.ReadLine());
             }
             Console.WriteLine("Felicitari!");
         }
